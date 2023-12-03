@@ -12,7 +12,7 @@ public class Character implements IEntity, IThing<Character.BodyType> {
 	public enum Hairstyles { Long, Spiky, Short }
 
     //Constructors
-	public Character(String name) { this(name, BodyType.A, Clothing.Noble, Hairstyles.Long); }
+	public Character(String name) { this(name, BodyType.D, Clothing.LightArmour, Hairstyles.Spiky); }
 	public Character(String name, BodyType bodyType) { this(name, bodyType, Clothing.Noble, Hairstyles.Long); }
 	public Character(String name, BodyType bodyType, Clothing clothing) { this(name, bodyType, clothing, Hairstyles.Long); }
 	public Character(String name, BodyType bodyType, Clothing clothing, Hairstyles hairStyle) {

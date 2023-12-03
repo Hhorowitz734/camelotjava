@@ -1,15 +1,13 @@
 package com.actions;
-
 import com.entities.Furniture;
 import com.entities.Character;;
-
 /**
- * Create an instance of this class whenever you want a character to leave a place and enter another one.
- * The experience manager waits for the success of this action.
- * @author Alireza Shirvani
- * @see com.entities.Character
- * @see com.entities.Furniture
- * @see com.entities.Enter
+* Create an instance of this class whenever you want a character to leave a place and enter another one.
+* The experience manager waits for the success of this action.
+* @author Alireza Shirvani
+* @see com.entities.Character
+* @see com.entities.Furniture
+* @see com.entities.Enter
 */
 public class Exit implements IAction{
 	Character character;
@@ -22,20 +20,18 @@ public class Exit implements IAction{
 	 * @param fadeOut Set true if you want to screen to fade out after Character leaves through the door
 	 */
 	public Exit(Character character, Furniture furniture, boolean fadeOut) {
-        this.character = character;
-        this.furniture = furniture;
-        this.fadeOut = fadeOut;
-    }
-
-    /**
-     * Constructor for exiting a piece of furniture without a fade-out effect.
-     * @param character The character performing the action.
-     * @param furniture The furniture to be exited.
-     */
-    public Exit(Character character, Furniture furniture) {
-        this(character, furniture, false); // Corrected constructor call
-    }
-
+       this.character = character;
+       this.furniture = furniture;
+       this.fadeOut = fadeOut;
+   }
+   /**
+    * Constructor for exiting a piece of furniture without a fade-out effect.
+    * @param character The character performing the action.
+    * @param furniture The furniture to be exited.
+    */
+   public Exit(Character character, Furniture furniture) {
+       this(character, furniture, false); // Corrected constructor call
+   }
 	/**
 	 * @return Exit
 	 */
@@ -43,7 +39,6 @@ public class Exit implements IAction{
 	public String getName() {
 		return "Exit";
 	}
-
 	/**
 	 * @return true
 	 */
@@ -56,5 +51,4 @@ public class Exit implements IAction{
 	public String toString() {
 		return String.format("%s(%s, %s, %s)", getName(), character.getName(), furniture.getName(), fadeOut);
 	}
-
 }

@@ -1,16 +1,13 @@
 package com.actions;
-
 import com.entities.Furniture;
-import com.entities.Character;
-import com.entities.Place;
-
+import com.entities.Character;;
 /**
- * Create an instance of this class whenever you want a character to leave a place and enter another one.
- * The experience manager waits for the success of this action.
- * @author Alireza Shirvani
- * @see com.entities.Character
- * @see com.entities.Furniture
- * @see com.entities.Enter
+* Create an instance of this class whenever you want a character to leave a place and enter another one.
+* The experience manager waits for the success of this action.
+* @author Alireza Shirvani
+* @see com.entities.Character
+* @see com.entities.Furniture
+* @see com.entities.Enter
 */
 public class Enter implements IAction{
 	Character character;
@@ -23,32 +20,25 @@ public class Enter implements IAction{
 	 * @param fadeOut Set true if you want to screen to fade out after Character leaves through the door
 	 */
 	public Enter(Character character, Furniture furniture, boolean fadeOut) {
-        this.character = character;
-        this.furniture = furniture;
-        this.fadeOut = fadeOut;
-    }
-
-    /**
-     * Constructor for exiting a piece of furniture without a fade-out effect.
-     * @param character The character performing the action.
-     * @param furniture The furniture to be exited.
-     */
-    public Enter(Character character, Furniture furniture) {
-        this(character, furniture, false); // Corrected constructor call
-    }
-
-    public Enter(Character character, Place place) {
-        this (character, null, true);
-    }
-
+       this.character = character;
+       this.furniture = furniture;
+       this.fadeOut = fadeOut;
+   }
+   /**
+    * Constructor for exiting a piece of furniture without a fade-out effect.
+    * @param character The character performing the action.
+    * @param furniture The furniture to be exited.
+    */
+   public Enter(Character character, Furniture furniture) {
+       this(character, furniture, false); // Corrected constructor call
+   }
 	/**
-	 * @return Enter
+	 * @return Exit
 	 */
 	@Override
 	public String getName() {
 		return "Enter";
 	}
-
 	/**
 	 * @return true
 	 */
@@ -61,5 +51,4 @@ public class Enter implements IAction{
 	public String toString() {
 		return String.format("%s(%s, %s, %s)", getName(), character.getName(), furniture.getName(), fadeOut);
 	}
-
 }

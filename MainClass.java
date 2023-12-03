@@ -1,5 +1,6 @@
 import com.storygraph.*;
-
+import com.entities.*;
+import com.entities.Place;
 public class MainClass {
 	public static void main(String[] args) {
 		try {
